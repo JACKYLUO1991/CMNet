@@ -1,7 +1,10 @@
 # HybridNetSeg
 HybridNetSeg: A Compact Hybrid Network for Retinal Vessel Segmentation
 
-How to reference this article：
+## References
+
+Please cite our paper if you find it useful in your research
+'''
 @article{Luo2019HybridNetSegAC,
   title={HybridNetSeg: A Compact Hybrid Network for Retinal Vessel Segmentation},
   author={Ling Luo and Dingyu Xue and Xinglong Feng},
@@ -9,3 +12,4 @@ How to reference this article：
   year={2019},
   volume={abs/1911.09982}
 }
+'''
