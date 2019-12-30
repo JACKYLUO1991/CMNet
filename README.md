@@ -1,5 +1,4 @@
 # HybridNetSeg
-HybridNetSeg: A Compact Hybrid Network for Retinal Vessel Segmentation
 
 ## Pay attention
 Once the paper is accepted, I will disclose all the training codes and detailed training procedures.
