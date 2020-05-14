@@ -10,7 +10,7 @@ def save_checkpoint(state, is_best, filename):
             shutil.copyfile(filename[0], filename[1])
     else:
         raise Exception("save deploy error, please check files...")
-    
+
 
 def load_pretrained(model, fname, optimizer=None):
     """
@@ -20,7 +20,10 @@ def load_pretrained(model, fname, optimizer=None):
     """
     if os.path.isfile(fname):
         print("=> loading checkpoint '{}'".format(fname))
-        checkpoint = torch.load(fname, map_location='cpu')
+        if torch.cuda.is_available():
+            checkpoint = torch.load(fname)
+        else:
+            checkpoint = torch.load(fname, map_location='cpu')
         model.load_state_dict(checkpoint['state_dict'])
         if optimizer is not None:
             optimizer.load_state_dict(checkpoint['optimizer'])

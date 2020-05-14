@@ -38,36 +38,35 @@ def calc_loss(prediction, target, bce_weight=.5):
     return loss
 
 
-def cross_entropy(logits, labels):
-    return torch.mean((1 - labels) * logits + torch.log(1 + torch.exp(-logits)))
+# def cross_entropy(logits, labels):
+#     return torch.mean((1 - labels) * logits + torch.log(1 + torch.exp(-logits)))
 
-
-class EdgeAwareLoss(nn.Module):
-    '''
-    A new novel edge aware segmention loss function
-    Paper: Pyramid Feature Attention Network for Saliency detection
-    https://github.com/CaitinZhao/cvpr2019_Pyramid-Feature-Attention-Network-for-Saliency-detection
-    '''
-
-    def __init__(self):
-        super(EdgeAwareLoss, self).__init__()
-        # out_channel, in_channel, height, weight
-        laplace_operator = torch.FloatTensor(
-            [[-1, -1, -1], [-1, 8, -1], [-1, -1, -1]]).view([1, 1, 3, 3])
-        self.laplace = nn.Parameter(data=laplace_operator, requires_grad=False)
-
-    def forward(self, prediction, target, ratio=.5):
-        # Prediction parameters need to be added after sigmoid function
-        prediction_edge = self.__laplace_func(prediction)
-        target_edge = self.__laplace_func(target)
-        # Loss function
-        edge_loss = cross_entropy(
-            prediction_edge, target_edge)
-        segmentation_loss = dice_loss(prediction, target)
-
-        return (1 - ratio) * edge_loss + ratio * segmentation_loss
-
-    def __laplace_func(self, x):
-        x = F.conv2d(x, self.laplace, stride=1, padding=1)
-        x = torch.abs(torch.tanh(x))
-        return x
+# class EdgeAwareLoss(nn.Module):
+#     '''
+#     A new novel edge aware segmention loss function
+#     Paper: Pyramid Feature Attention Network for Saliency detection
+#     https://github.com/CaitinZhao/cvpr2019_Pyramid-Feature-Attention-Network-for-Saliency-detection
+#     '''
+#
+#     def __init__(self):
+#         super(EdgeAwareLoss, self).__init__()
+#         # out_channel, in_channel, height, weight
+#         laplace_operator = torch.FloatTensor(
+#             [[-1, -1, -1], [-1, 8, -1], [-1, -1, -1]]).view([1, 1, 3, 3])
+#         self.laplace = nn.Parameter(data=laplace_operator, requires_grad=False)
+#
+#     def forward(self, prediction, target, ratio=.5):
+#         # Prediction parameters need to be added after sigmoid function
+#         prediction_edge = self.__laplace_func(prediction)
+#         target_edge = self.__laplace_func(target)
+#         # Loss function
+#         edge_loss = cross_entropy(
+#             prediction_edge, target_edge)
+#         segmentation_loss = dice_loss(prediction, target)
+#
+#         return (1 - ratio) * edge_loss + ratio * segmentation_loss
+#
+#     def __laplace_func(self, x):
+#         x = F.conv2d(x, self.laplace, stride=1, padding=1)
+#         x = torch.abs(torch.tanh(x))
+#         return x

@@ -13,13 +13,12 @@ def f_score(pr, gt, beta=1, eps=1e-7, threshold=.5):
     fn = torch.sum(gt) - tp
 
     score = ((1 + beta ** 2) * tp + eps) \
-        / ((1 + beta ** 2) * tp + beta ** 2 * fn + fp + eps)
+            / ((1 + beta ** 2) * tp + beta ** 2 * fn + fp + eps)
 
     return score
 
 
 class FscoreMetric(nn.Module):
-
     __name__ = 'f-score'
 
     def __init__(self, beta=1, eps=1e-7, threshold=.5):
@@ -43,7 +42,7 @@ def calculate_Accuracy(confusion):
     Acc = np.sum(tp) / np.sum(confusion)
     Se = confusion[1][1] / (confusion[1][1] + confusion[0][1])  # tp / (tp + fn)
     Sp = confusion[0][0] / (confusion[0][0] + confusion[1][0])  # tn / (tn + fp)
-    PPV = confusion[1][1] / (confusion[1][1] + confusion[1][0]) # tp / (tp + fp)
+    PPV = confusion[1][1] / (confusion[1][1] + confusion[1][0])  # tp / (tp + fp)
 
     # is the harmonic mean of precision and sensitivity
     F1 = (2 * PPV * Se) / (PPV + Se)
