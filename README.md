@@ -1,7 +1,8 @@
 # CMNet
 
+
 ## Pay Attention
 Once the paper is accepted, I will disclose all the training codes and detailed training procedures.
 
 ## Major introduction！！！！
-The new version has achieved good results on multiple datasets. The code and pre-trained model are about to be open source ...
+The new version has achieved good results on multiple datasets.
