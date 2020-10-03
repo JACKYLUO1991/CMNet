@@ -1,4 +1,4 @@
-# CMNet
+# Compact mixed network(CMNet)
 ## CHINESE INTRODUCTION
 摘  要 ：为了解决视网膜血管分割困难以及时间复杂度高等问题, 本文提出一种能同时兼顾分割速度和准确度,
 结构非对称的视网膜血管分割模型 CMNet (Compact mixed network). 首先, 考虑到可变形卷积能够提取复杂多变
