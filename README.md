@@ -16,5 +16,11 @@ It has been accepted by the Journal of Control and Decision.
 Baidu web disk：https://pan.baidu.com/s/11-7SyBmIeue-dmPQa9P3aA  
 password：u8q3
 
-## MAJOR INTRODUCTION！！！！（主要贡献）
+## Main contribution（主要贡献）
 The new version has achieved good results on multiple datasets.
+
+## Author team（作者团队）
+Ling Luo, Dingyu Xue，Xinglong Feng
+
+
+
