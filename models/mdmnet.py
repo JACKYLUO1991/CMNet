@@ -325,11 +325,11 @@ class MDMNet(nn.Module):
         self.fu3 = torch.nn.Parameter(torch.FloatTensor(1), requires_grad=True)
         self.fu4 = torch.nn.Parameter(torch.FloatTensor(1), requires_grad=True)
 
-        # # Initial
-        # self.fu1.data.fill_(0.25)
-        # self.fu2.data.fill_(0.25)
-        # self.fu3.data.fill_(0.25)
-        # self.fu4.data.fill_(0.25)
+        # Initial
+        self.fu1.data.fill_(0.25)
+        self.fu2.data.fill_(0.25)
+        self.fu3.data.fill_(0.25)
+        self.fu4.data.fill_(0.25)
 
         # self._initialize_weights()
 
