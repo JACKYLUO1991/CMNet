@@ -12,10 +12,6 @@ kernel in mixed depthwise convolution can further improve segmentation quality w
 现已被控制与决策期刊接收！
 It has been accepted by the Journal of Control and Decision.
 
-## WEIGHTS AND TRAINING DETAILS （模型权重和训练细节）
-Baidu web disk：https://pan.baidu.com/s/11-7SyBmIeue-dmPQa9P3aA  
-password：u8q3
-
 ## Main contribution（主要贡献）
 The new version has achieved good results on multiple datasets.
 
