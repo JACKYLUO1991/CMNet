@@ -18,5 +18,19 @@ The new version has achieved good results on multiple datasets.
 ## Author team（作者团队）
 Ling Luo, Dingyu Xue，Xinglong Feng
 
+@Article{2022353,
+title = {基于紧凑混合网络的视网膜血管自动分割},
+author = {罗凌,薛定宇,冯兴隆},
+ journal = {控制与决策},
+ volume = {37},
+ number = {2},
+ pages = {353},
+ numpages = {8},
+ year = {2022},
+ month = {02},
+ doi = {10.13195/j.kzyjc.2020.0883},
+ publisher = {}
+}
+
 
 
