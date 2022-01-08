@@ -18,6 +18,8 @@ The new version has achieved good results on multiple datasets.
 ## Author team（作者团队）
 Ling Luo, Dingyu Xue，Xinglong Feng
 
+## Citation（引用方式）
+```
 @Article{2022353,
 title = {基于紧凑混合网络的视网膜血管自动分割},
 author = {罗凌,薛定宇,冯兴隆},
@@ -31,6 +33,6 @@ author = {罗凌,薛定宇,冯兴隆},
  doi = {10.13195/j.kzyjc.2020.0883},
  publisher = {}
 }
-
+```
 
 
